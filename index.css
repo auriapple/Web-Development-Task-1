@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Auri.jpg);
+    background-size: 1600px;
+    background-position: 50% 100%;
+    padding: 10px;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    max-height: 700px;
+    height: 90%;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    align-items: center;
+}
+.container .title{
+    font-size: 30px;
+    color: #483248;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.container form .user-info{
+    margin: 15px 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user-info .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-info .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-info .input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 14px;
+    border-bottom-width: 2px;
+}
+.user-info .input-box input:focus,
+.user-info .input-box input:valid{
+    border-color: black;
+}
+form .gender-info .gender-title{
+    font-size: 18px;
+    font-weight: 500;
+}
+form .gender-info .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-info .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-info .category .option{
+    height: 18px;
+    width: 18px;
+    background: lightgrey;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+#opt-1:checked ~ .category label .one,
+#opt-2:checked ~ .category label .two,
+#opt-3:checked ~ .category label .three{
+    border-color: lightgray;
+    background-color: purple;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 45px 10px;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: black;
+    border-radius: 5px;
+    background: #483248;
+    color: white;
+    font-size: 15px;
+}
+form .button input:hover{
+    background: #AA336A;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+        max-height: 500px;
+    }
+    form .user-info .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-info .category{
+        width: 100%;
+    }
+    .container form .user-info{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-info::-webkit-scrollbar{
+        width: 0px;
+    }
+}
